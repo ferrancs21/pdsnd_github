@@ -18,7 +18,11 @@ Once the code has printed the results, it asks the user if he wants to explore t
 
 
 ### Files used
-Include the files used
+python.py
+chicago.csv
+new_york_city.csv
+washington.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+An issue with statistics.mode() was solved using the solution in this link:
+https://stackoverflow.com/questions/50959614/no-unique-mode-found-2-equally-common-values/57461528
