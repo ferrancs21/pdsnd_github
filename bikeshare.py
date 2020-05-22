@@ -165,7 +165,7 @@ def load_data(city, month, day):
     # Extracts month, day and time of the Start Time
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     df['End Time'] = pd.to_datetime(df['End Time'])
-    df['TripLength'] = df['End Time'] - df['Start Time']
+
     #Selects month
     if month == "all":
         df = df
@@ -181,6 +181,7 @@ def load_data(city, month, day):
     df['month'] = df['Start Time'].dt.month
     df['day_of_week'] = df['Start Time'].dt.day_name()
     df['hour'] = df['Start Time'].dt.hour
+    df['TripLength'] = df['End Time'] - df['Start Time']
     return df
 
 def time_stats(df):
