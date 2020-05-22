@@ -1,5 +1,6 @@
 ### Date created
 Project creation data: 22/05/20
+
 README file data: 22/05/20
 
 ### Project Title
@@ -14,13 +15,16 @@ When running the code. It interacts with the user asking for the city for which 
 
 Then the code prints the results.
 
-Once the code has printed the results, it asks the user if he wants to explore the raw data by showing 5 rows at a time till the user is done. Then it asks the user if he wants to run again the code from the begining.
+Once the code has printed the results, it asks the user if he wants to explore the raw data by showing 5 rows at a time till the user is done. Then it asks the user if he wants to run again the code from the beginning.
 
 
 ### Files used
 python.py
+
 chicago.csv
+
 new_york_city.csv
+
 washington.csv
 
 ### Credits
