@@ -165,7 +165,7 @@ def load_data(city, month, day):
     # Extracts month, day and time of the Start Time
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     df['End Time'] = pd.to_datetime(df['End Time'])
-    df['TripLength'] = df['End Time'] - df['Start Time']
+
     #Selects month
     if month == "all":
         df = df
@@ -181,6 +181,7 @@ def load_data(city, month, day):
     df['month'] = df['Start Time'].dt.month
     df['day_of_week'] = df['Start Time'].dt.day_name()
     df['hour'] = df['Start Time'].dt.hour
+    df['TripLength'] = df['End Time'] - df['Start Time']
     return df
 
 def time_stats(df):
@@ -236,7 +237,7 @@ def trip_duration_stats(df):
     start_time = time.time()
 
     # display total travel time
-    TTT = sum(df['TripLength'], datetime.timedelta(0))
+    TTT = df['TripLength'].sum()
     print('\nThe total travel time is {}\n'.format(TTT))
 
     # display mean travel time
@@ -315,8 +316,8 @@ trip data? (y/n)\n')
         if view_data.lower() == 'y':
             raw_data(df)
 
-        restart = input('\nWould you like to restart? Enter yes or no.\n')
-        if restart.lower() != 'yes':
+        restart = input('\nWould you like to restart? (y/n)\n')
+        if restart.lower() != 'y':
             break
 
 
